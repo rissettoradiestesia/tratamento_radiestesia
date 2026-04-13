@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login do Projeto</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+    body {
+      background: linear-gradient(135deg, #e8f0ff, #f7fbff);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: #1f2a44;
+    }
+    .container {
+      width: 100%;
+      max-width: 920px;
+      background: #ffffff;
+      border-radius: 22px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+      overflow: hidden;
+    }
+    .header {
+      background: linear-gradient(135deg, #2f5bea, #5a7cff);
+      color: white;
+      padding: 28px;
+      text-align: center;
+    }
+    .header h1 { font-size: 28px; margin-bottom: 8px; }
+    .header p { font-size: 15px; opacity: 0.95; }
+    .content { padding: 28px; }
+    .field { margin-bottom: 18px; }
+    label { display: block; font-weight: bold; margin-bottom: 8px; font-size: 14px; }
+    input {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #cfd8ea;
+      border-radius: 12px;
+      font-size: 15px;
+      outline: none;
+    }
+    input:focus {
+      border-color: #2f5bea;
+      box-shadow: 0 0 0 3px rgba(47, 91, 234, 0.12);
+    }
+    button {
+      width: 100%;
+      padding: 13px;
+      border: none;
+      border-radius: 12px;
+      background: #2f5bea;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover { background: #2448bb; }
+    .msg-erro { margin-top: 14px; color: #d93025; font-size: 14px; text-align: center; }
+    .hidden { display: none; }
+    .usuario-box {
+      margin-bottom: 22px;
+      padding: 18px;
+      border-radius: 16px;
+      background: #f8fbff;
+      border: 1px solid #dbe7ff;
+    }
+    .usuario-box h2 { color: #2f5bea; margin-bottom: 10px; }
+    .usuario-box p { margin-bottom: 8px; line-height: 1.6; }
+    .explicacao-box {
+      margin-bottom: 26px;
+      padding: 20px;
+      background: #fcfdff;
+      border: 1px solid #e6ecfa;
+      border-radius: 16px;
+    }
+    .explicacao-box h3 {
+      color: #2f5bea;
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+    .explicacao-box p {
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+    .tratamento-card {
+      border: 1px solid #dfe8fb;
+      border-radius: 18px;
+      background: #f8fbff;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(47, 91, 234, 0.06);
+      margin-bottom: 16px;
+    }
+    .tratamento-topo {
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      background: linear-gradient(180deg, #fbfdff, #f3f7ff);
+    }
+    .tratamento-info h3 {
+      color: #22304f;
+      margin-bottom: 6px;
+      font-size: 19px;
+    }
+    .tratamento-meta {
+      color: #5b6a87;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .tratamento-acoes {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+    .seta {
+      font-size: 22px;
+      color: #2f5bea;
+      transition: transform 0.2s ease;
+    }
+    .tratamento-card.aberto .seta {
+      transform: rotate(180deg);
+    }
+    .tratamento-corpo {
+      display: none;
+      padding: 0 20px 20px 20px;
+      border-top: 1px solid #e4ebfb;
+      background: #ffffff;
+    }
+    .tratamento-card.aberto .tratamento-corpo {
+      display: block;
+    }
+    .timeline-wrap {
+      position: relative;
+      margin: 22px 0 6px;
+      padding-left: 28px;
+    }
+    .timeline-wrap::before {
+      content: "";
+      position: absolute;
+      left: 9px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, #2f5bea, #bdd0ff);
+      border-radius: 999px;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 18px;
+      padding: 18px 18px 18px 22px;
+      background: #f6f9ff;
+      border-radius: 16px;
+      border: 1px solid #dfe8fb;
+      box-shadow: 0 6px 16px rgba(47, 91, 234, 0.06);
+    }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -25px;
+      top: 22px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #2f5bea;
+      border: 4px solid #ffffff;
+      box-shadow: 0 0 0 2px #bcd0ff;
+    }
+    .item-data {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #22304f;
+    }
+    .item-observacao {
+      margin-bottom: 12px;
+      line-height: 1.6;
+      color: #3c4b68;
+    }
+    .status {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      white-space: nowrap;
+    }
+    .concluida { background: #d1f5dd; color: #176b35; }
+    .desenvolvimento { background: #fff3cd; color: #8a6d1d; }
+    .pendente, .nao_iniciado { background: #fde2e2; color: #a12626; }
+    .finalizado { background: #d9efff; color: #145b88; }
+    .sem-itens {
+      margin-top: 18px;
+      padding: 16px;
+      background: #f8fbff;
+      border-radius: 14px;
+      color: #4d5d7b;
+      border: 1px dashed #ccd9f7;
+    }
+    .logout {
+      background: #eef3ff;
+      color: #2f5bea;
+      border: 1px solid #cad6f7;
+    }
+    .logout:hover { background: #dfe9ff; }
+    .contato-box {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 16px;
+      background: #f8fbff;
+      border: 1px solid #dbe7ff;
+    }
+    .contato-box h3 {
+      color: #2f5bea;
+      margin-bottom: 10px;
+    }
+    .contato-box p {
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+    .contato-box a {
+      color: #2f5bea;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .contato-box a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Sistema de Acompanhamento</h1>
+      <p>Entre com seu usuário e senha para visualizar o andamento do processo</p>
+    </div>
+
+    <div class="content" id="loginPage">
+      <div class="field">
+        <label>Usuário</label>
+        <input type="text" id="username" />
+      </div>
+
+      <div class="field">
+        <label>Senha</label>
+        <input type="password" id="password" />
+      </div>
+
+      <button onclick="login()">Entrar</button>
+      <div class="msg-erro" id="errorMessage"></div>
+    </div>
+
+    <div class="content hidden" id="adminPage">
+      <div class="usuario-box">
+        <h2 id="adminMessage"></h2>
+      </div>
+      <button class="logout" onclick="logout()">Sair</button>
+    </div>
+
+    <div class="content hidden" id="fluxoPage">
+      <div class="usuario-box">
+        <h2 id="fluxoTitulo"></h2>
+        <p id="fluxoSubtitulo"></p>
+      </div>
+
+      <div class="explicacao-box">
+        <h3>O que é o tratamento de radiestesia?</h3>
+        <p>A radiestesia é uma técnica de percepção energética que busca identificar possíveis desequilíbrios em diferentes áreas da vida, como emocional, mental, espiritual e vibracional. A partir dessa leitura, o tratamento é direcionado para promover harmonização, equilíbrio e bem-estar.</p>
+        <p>Durante o processo, são observados pontos que podem estar interferindo no seu campo energético, e cada etapa vai sendo conduzida de forma gradual, respeitando o momento de cada pessoa. O objetivo é trazer mais clareza, alinhamento e apoio no seu processo de reorganização energética.</p>
+        <p>Abaixo você consegue acompanhar a continuidade do seu processo em formato de fluxo, visualizando cada etapa do andamento do tratamento.</p>
+      </div>
+
+      <div id="timelineContainer"></div>
+
+      <div class="contato-box">
+        <h3>Contato</h3>
+        <p>WhatsApp: <a id="whatsAppLink" href="#" target="_blank" rel="noopener noreferrer"></a></p>
+        <p>Instagram: <a id="instagramLink" href="#" target="_blank" rel="noopener noreferrer"></a></p>
+      </div>
+
+      <button class="logout" onclick="logout()">Sair</button>
+    </div>
+  </div>
+
+  <script>
+    const contatoPadrao = {
+      whatsappNumero: '5515988237737',
+      whatsappTexto: 'Olá, gostaria de saber mais sobre o tratamento de radiestesia.',
+      whatsappExibicao: '(15) 9 8823-7737',
+      instagramUrl: 'https://www.instagram.com/rissettoradiestesia/',
+      instagramExibicao: '@rissettoradiestesia'
+    };
+
+    const usuarios = [
+      {
+        user: 'adim',
+        senha: '1234556',
+        tipo: 'admin'
+      },
+      {
+        user: 'Adrielen_terra',
+        senha: '38215415806',
+        tipo: 'fluxo',
+        tituloFluxo: 'Acompanhamento dos Tratamentos',
+        descricaoFluxo: 'Visualize abaixo os tratamentos cadastrados e expanda cada um para acompanhar os itens de evolução.',
+        tratamentos: [
+          {
+            nome: 'Tratamento 03 - Limpeza de Útero',
+            inicio: '04/05/2026',
+            fim: '09/05/2026',
+            status: 'pendente',
+            itens: []
+          },
+          {
+            nome: 'Tratamento 02 - Limpeza de Útero',
+            inicio: '30/03/2026',
+            fim: '07/04/2026',
+            status: 'finalizado',
+            itens: [
+              {
+                item: 'item_01',
+                data: '30/03/2026',
+                observacao: 'Anamnese e início do tratamento coletivo',
+                status: 'concluida'
+              },
+              {
+                item: 'item_02',
+                data: '01/04/2026',
+                observacao: 'Tratamento montado',
+                status: 'concluida'
+              },
+              {
+                item: 'item_03',
+                data: '05/04/2026',
+                observacao: 'Tratamento montado e prolongado por mais dois dias',
+                status: 'concluida'
+              },
+              {
+                item: 'item_04',
+                data: '06/04/2026',
+                observacao: 'Tratamento mantido',
+                status: 'concluida'
+              },
+              {
+                item: 'item_05',
+                data: '07/04/2026',
+                observacao: 'Tratamento finalizado',
+                status: 'concluida'
+              }
+            ]
+          },
+          {
+            nome: 'Tratamento 01 - Coletivo',
+            inicio: '03/04/2026',
+            fim: '09/04/2026',
+            status: 'finalizado',
+            itens: [
+              {
+                item: 'item_01',
+                data: '01/04/2026',
+                observacao: 'Início do tratamento coletivo',
+                status: 'concluida'
+              },
+              {
+                item: 'item_02',
+                data: '05/04/2026',
+                observacao: 'Finalização do tratamento coletivo',
+                status: 'concluida'
+              }
+            ]
+          }
+        ],
+        contato: {
+          whatsappNumero: '5515988237737',
+          whatsappTexto: 'Olá, gostaria de saber mais sobre o tratamento de radiestesia.',
+          whatsappExibicao: '(15) 9 8823-7737',
+          instagramUrl: 'https://www.instagram.com/rissettoradiestesia/',
+          instagramExibicao: '@rissettoradiestesia'
+        }
+      },
+      {
+        user: 'rodolfo',
+        senha: 'terra2',
+        tipo: 'fluxo',
+        tituloFluxo: 'Acompanhamento dos Tratamentos',
+        descricaoFluxo: 'Visualize abaixo os tratamentos cadastrados e expanda cada um para acompanhar os itens de evolução.',
+        tratamentos: [
+          {
+            nome: 'Tratamento 01 - Radiestesia Completa',
+            inicio: '09/04/2026',
+            fim: '15/04/2026',
+            status: 'desenvolvimento',
+            itens: [
+              {
+                item: 'item_01',
+                data: '09/04/2026',
+                observacao: 'Início do projeto',
+                status: 'concluida'
+              },
+              {
+                item: 'item_02',
+                data: '10/04/2026',
+                observacao: 'Análise da anamnese concluída',
+                status: 'concluida'
+              },
+              {
+                item: 'item_03',
+                data: '11/04/2026',
+                observacao: 'Início do tratamento',
+                status: 'desenvolvimento'
+              },
+              {
+                item: 'item_04',
+                data: '12/04/2026',
+                observacao: 'Tratamento montado',
+                status: 'pendente'
+              },
+              {
+                item: 'item_05',
+                data: '13/04/2026',
+                observacao: 'Aguardando avanço da próxima etapa',
+                status: 'pendente'
+              },
+              {
+                item: 'item_06',
+                data: '15/04/2026',
+                observacao: 'Previsão de finalização do tratamento',
+                status: 'pendente'
+              }
+            ]
+          },
+          {
+            nome: 'Tratamento 02 - Limpeza de Ambiente',
+            inicio: '',
+            fim: '',
+            status: 'nao_iniciado',
+            itens: []
+          },
+          {
+            nome: 'Tratamento 03 - Coletivo',
+            inicio: '01/04/2026',
+            fim: '05/04/2026',
+            status: 'finalizado',
+            itens: [
+              {
+                item: 'item_01',
+                data: '01/04/2026',
+                observacao: 'Início do tratamento coletivo',
+                status: 'concluida'
+              },
+              {
+                item: 'item_02',
+                data: '05/04/2026',
+                observacao: 'Finalização do tratamento coletivo',
+                status: 'concluida'
+              }
+            ]
+          }
+        ],
+        contato: {
+          whatsappNumero: '5515988237737',
+          whatsappTexto: 'Olá, gostaria de saber mais sobre o tratamento de radiestesia.',
+          whatsappExibicao: '(15) 9 8823-7737',
+          instagramUrl: 'https://www.instagram.com/rissettoradiestesia/',
+          instagramExibicao: '@rissettoradiestesia'
+        }
+      }
+    ];
+
+    function formatarDataHoje() {
+      return new Date().toLocaleDateString('pt-BR');
+    }
+
+    function normalizarStatus(status) {
+      return String(status || '').trim().toLowerCase();
+    }
+
+    function formatarStatus(status) {
+      const statusNormalizado = normalizarStatus(status);
+      const mapa = {
+        concluida: 'Concluída',
+        desenvolvimento: 'Em desenvolvimento',
+        pendente: 'Pendente',
+        nao_iniciado: 'Ainda não iniciado',
+        finalizado: 'Finalizado'
+      };
+      return mapa[statusNormalizado] || status;
+    }
+
+    function configurarContato(contato) {
+      const dados = contato || contatoPadrao;
+      const whatsAppLink = document.getElementById('whatsAppLink');
+      const instagramLink = document.getElementById('instagramLink');
+
+      const mensagem = encodeURIComponent(dados.whatsappTexto || contatoPadrao.whatsappTexto);
+      const numeroLimpo = String(dados.whatsappNumero || contatoPadrao.whatsappNumero).replace(/\D/g, '');
+
+      whatsAppLink.href = 'https://wa.me/' + numeroLimpo + '?text=' + mensagem;
+      whatsAppLink.textContent = dados.whatsappExibicao || contatoPadrao.whatsappExibicao;
+      whatsAppLink.target = '_blank';
+      whatsAppLink.rel = 'noopener noreferrer';
+
+      instagramLink.href = dados.instagramUrl || contatoPadrao.instagramUrl;
+      instagramLink.textContent = dados.instagramExibicao || contatoPadrao.instagramExibicao;
+      instagramLink.target = '_blank';
+      instagramLink.rel = 'noopener noreferrer';
+    }
+
+    function renderizarFluxo(usuario) {
+      const timelineContainer = document.getElementById('timelineContainer');
+      const fluxoTitulo = document.getElementById('fluxoTitulo');
+      const fluxoSubtitulo = document.getElementById('fluxoSubtitulo');
+
+      fluxoTitulo.textContent = usuario.tituloFluxo || 'Fluxo';
+      fluxoSubtitulo.textContent = usuario.descricaoFluxo || 'Usuário: ' + usuario.user;
+
+      timelineContainer.innerHTML = '';
+
+      if (!usuario.tratamentos || usuario.tratamentos.length === 0) {
+        timelineContainer.innerHTML = '<div class="timeline-item">Nenhum tratamento cadastrado para este usuário.</div>';
+        configurarContato(usuario.contato);
+        return;
+      }
+
+      usuario.tratamentos.forEach(function(tratamento) {
+        const card = document.createElement('div');
+        card.className = 'tratamento-card';
+
+        const inicioTexto = tratamento.inicio ? 'Início: ' + tratamento.inicio : 'Início: ainda não definido';
+        const fimTexto = tratamento.fim ? 'Fim: ' + tratamento.fim : 'Fim: ainda não definido';
+        const statusNormalizado = normalizarStatus(tratamento.status);
+
+        let itensHtml = '';
+
+        if (tratamento.itens && tratamento.itens.length > 0) {
+          itensHtml = '<div class="timeline-wrap">';
+          tratamento.itens.forEach(function(etapa) {
+            const statusItem = normalizarStatus(etapa.status);
+            itensHtml += '<div class="timeline-item">';
+            itensHtml += '<div class="item-data">' + (etapa.data || '') + '</div>';
+            itensHtml += '<div class="item-observacao">' + (etapa.observacao || '') + '</div>';
+            itensHtml += '<span class="status ' + statusItem + '">' + formatarStatus(etapa.status) + '</span>';
+            itensHtml += '</div>';
+          });
+          itensHtml += '</div>';
+        } else {
+          itensHtml = '<div class="sem-itens">Este tratamento ainda não possui itens cadastrados.</div>';
+        }
+
+        card.innerHTML = '' +
+          '<div class="tratamento-topo" onclick="alternarTratamento(this.parentElement)">' +
+            '<div class="tratamento-info">' +
+              '<h3>' + (tratamento.nome || 'Tratamento') + '</h3>' +
+              '<div class="tratamento-meta">' + inicioTexto + '<br>' + fimTexto + '</div>' +
+            '</div>' +
+            '<div class="tratamento-acoes">' +
+              '<span class="status ' + statusNormalizado + '">' + formatarStatus(tratamento.status) + '</span>' +
+              '<span class="seta">⌄</span>' +
+            '</div>' +
+          '</div>' +
+          '<div class="tratamento-corpo">' + itensHtml + '</div>';
+
+        timelineContainer.appendChild(card);
+      });
+
+      configurarContato(usuario.contato);
+    }
+
+    function alternarTratamento(card) {
+      card.classList.toggle('aberto');
+    }
+
+    function login() {
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const errorMessage = document.getElementById('errorMessage');
+
+      const userEncontrado = usuarios.find(function(u) {
+        return u.user === username && u.senha === password;
+      });
+
+      if (!userEncontrado) {
+        errorMessage.textContent = 'Usuário ou senha inválidos';
+        return;
+      }
+
+      errorMessage.textContent = '';
+      document.getElementById('loginPage').classList.add('hidden');
+
+      if (userEncontrado.tipo === 'admin') {
+        document.getElementById('adminPage').classList.remove('hidden');
+        document.getElementById('adminMessage').innerText = 'Olá ' + userEncontrado.user + ', o dia de hoje é ' + formatarDataHoje();
+      }
+
+      if (userEncontrado.tipo === 'fluxo') {
+        document.getElementById('fluxoPage').classList.remove('hidden');
+        renderizarFluxo(userEncontrado);
+      }
+    }
+
+    function logout() {
+      document.getElementById('loginPage').classList.remove('hidden');
+      document.getElementById('adminPage').classList.add('hidden');
+      document.getElementById('fluxoPage').classList.add('hidden');
+      document.getElementById('username').value = '';
+      document.getElementById('password').value = '';
+      document.getElementById('errorMessage').textContent = '';
+    }
+  </script>
+</body>
+</html>
