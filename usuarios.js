@@ -287,6 +287,22 @@ const usuarios = [
       status: 'Em Andamento',
       itens: [
         {
+          item: 'item_20',
+          data: '26/04/2026',
+          observacao: 'Cromoterapia Azul',
+          status: 'Em Andamento'
+        },{
+          item: 'item_21',
+          data: '27/04/2026',
+          observacao: 'Cromoterapia Azul',
+          status: 'Em Andamento'
+        },{
+          item: 'item_22',
+          data: '28/04/2026',
+          observacao: 'Cromoterapia Azul',
+          status: 'Em Andamento'
+        },
+        {
           item: 'item_01',
           data: '29/04/2026',
           observacao: 'Anamnese',
