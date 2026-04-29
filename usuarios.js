@@ -271,6 +271,139 @@ const usuarios = [
       }
     ]
   },
+{
+  user: '02832251900',
+  senha: '06031977',
+  tipo: 'fluxo',
+  tituloFluxo: 'Acompanhamento dos Tratamentos',
+  descricaoFluxo: 'Visualize abaixo os tratamentos cadastrados e expanda cada um para acompanhar os itens de evolução.',
+  contato: contatoPadrao,
+  tratamentos: [
+    {
+      nome: 'Tratamento 01 - Radiestesia Completa',
+      Relatório: '',
+      inicio: '25/04/2026',
+      fim: '17/05/2026',
+      status: 'Em Andamento',
+      itens: [
+        {
+          item: 'item_01',
+          data: '29/04/2026',
+          observacao: 'Anamnese',
+          status: 'Em Andamento'
+        },
+        {
+          item: 'item_02',
+          data: '30/04/2026',
+          observacao: 'Reprogramação Vibracional',
+          status: 'Pendente'
+        },
+        {
+          item: 'item_03',
+          data: '01/05/2026',
+          observacao: 'Reprogramação Vibracional',
+          status: 'Pendente'
+        },
+        {
+          item: 'item_04',
+          data: '02/05/2026',
+          observacao: 'Reprogramação Vibracional',
+          status: 'Pendente'
+        },
+        {
+          item: 'item_05',
+          data: '03/05/2026',
+          observacao: 'Reprogramação Vibracional',
+          status: 'Pendente'
+        },
+        {
+          item: 'item_06',
+          data: '04/05/2026',
+          observacao: 'Reprogramação Vibracional',
+          status: 'Pendente'
+        },
+        {
+          item: 'item_07',
+          data: '05/05/2026',
+          observacao: 'Reprogramação Vibracional',
+          status: 'Pendente'
+        },
+        {
+          item: 'item_08',
+          data: '06/05/2026',
+          observacao: 'Reprogramação Vibracional',
+          status: 'Pendente'
+        },
+        {
+          item: 'item_09',
+          data: '07/05/2026',
+          observacao: 'Protocolo de harmonização e recuperação pós cirurgia',
+          status: 'Pendente'
+        },
+        {
+          item: 'item_10',
+          data: '08/05/2026',
+          observacao: 'Protocolo de harmonização e recuperação pós cirurgia',
+          status: 'Pendente'
+        },
+        {
+          item: 'item_11',
+          data: '09/05/2026',
+          observacao: 'Protocolo de harmonização e recuperação pós cirurgia',
+          status: 'Pendente'
+        },
+        {
+          item: 'item_12',
+          data: '10/05/2026',
+          observacao: 'Protocolo de harmonização e recuperação pós cirurgia',
+          status: 'Pendente'
+        },
+        {
+          item: 'item_13',
+          data: '11/05/2026',
+          observacao: 'Protocolo de harmonização e recuperação pós cirurgia',
+          status: 'Pendente'
+        },
+        {
+          item: 'item_14',
+          data: '12/05/2026',
+          observacao: 'Protocolo de harmonização e recuperação pós cirurgia',
+          status: 'Pendente'
+        },
+        {
+          item: 'item_15',
+          data: '13/05/2026',
+          observacao: 'Protocolo de harmonização e recuperação pós cirurgia',
+          status: 'Pendente'
+        },
+        {
+          item: 'item_16',
+          data: '14/05/2026',
+          observacao: 'Reprogramação de proteção e ambiente profissional',
+          status: 'Pendente'
+        },
+        {
+          item: 'item_17',
+          data: '15/05/2026',
+          observacao: 'Reprogramação de proteção e ambiente profissional',
+          status: 'Pendente'
+        },
+        {
+          item: 'item_18',
+          data: '16/05/2026',
+          observacao: 'Reprogramação de proteção e ambiente profissional',
+          status: 'Pendente'
+        },
+        {
+          item: 'item_19',
+          data: '17/05/2026',
+          observacao: 'Reprogramação de proteção e ambiente profissional',
+          status: 'Pendente'
+        }
+      ]
+    }
+  ]
+},
   {
     user: 'rodolfo',
     senha: 'terra2',
@@ -281,6 +414,7 @@ const usuarios = [
     tratamentos: [
       {
         nome: 'Tratamento 01 - Radiestesia Completa',
+        Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/anamnese/laudo_terapia_energetica_anamnese_Adirlaine_Alc%C3%A2ntara_Carola.pdf',
         inicio: '09/04/2026',
         fim: '15/04/2026',
         status: 'Em Andamento',

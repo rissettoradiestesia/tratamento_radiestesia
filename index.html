@@ -387,6 +387,27 @@
       return new Date().toLocaleDateString('pt-BR');
     }
 
+    function converterGithubParaRaw(url) {
+      if (!url) return '';
+
+      // Só converte se for link do GitHub
+      if (url.includes('github.com')) {
+        return url
+          .replace('github.com', 'raw.githubusercontent.com')
+          .replace('/blob/', '/');
+      }
+
+      return url;
+    }
+
+    function converterRawParaGithub(url) {
+      if (!url) return '';
+
+      return url
+        .replace('raw.githubusercontent.com', 'github.com')
+        .replace('/main/', '/blob/main/');
+    }
+
     function normalizarStatus(status) {
       return String(status || '')
         .toLowerCase()
@@ -427,6 +448,35 @@
       instagramLink.textContent = dados.instagramExibicao || contatoPadrao.instagramExibicao;
     }
 
+    function extrairDataValida(textoData) {
+      const texto = String(textoData || '');
+      const match = texto.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+
+      if (!match) return null;
+
+      const dia = Number(match[1]);
+      const mes = Number(match[2]) - 1;
+      const ano = Number(match[3]);
+
+      return new Date(ano, mes, dia);
+    }
+
+    function statusAutomaticoPorData(dataItem, statusAtual) {
+      const data = extrairDataValida(dataItem);
+
+      if (!data) return statusAtual;
+
+      const hoje = new Date();
+      hoje.setHours(0, 0, 0, 0);
+      data.setHours(0, 0, 0, 0);
+
+      if (data < hoje) {
+        return 'concluida';
+      }
+
+      return statusAtual;
+    }
+
     function renderizarFluxo(usuario) {
       const timelineContainer = document.getElementById('timelineContainer');
       const fluxoTitulo = document.getElementById('fluxoTitulo');
@@ -448,6 +498,13 @@
 
         const inicioTexto = tratamento.inicio ? 'Início: ' + tratamento.inicio : 'Início: ainda não definido';
         const fimTexto = tratamento.fim ? 'Fim: ' + tratamento.fim : 'Fim: ainda não definido';
+        const linkGithub = converterRawParaGithub(tratamento.Relatório);
+
+        const linkDownload = converterGithubParaRaw(tratamento.Relatório);
+
+        const relatorioHtml = tratamento.Relatório
+          ? 'Acesso a anamnese completa: <a href="' + linkDownload + '" target="_blank" rel="noopener noreferrer">Laudo Terapêutico Vibracional</a><br>'
+          : '';
         const statusNormalizado = normalizarStatus(tratamento.status);
 
         card.className = 'tratamento-card';
@@ -458,7 +515,8 @@
           itensHtml = '<div class="timeline-wrap">';
 
           tratamento.itens.forEach(function(etapa) {
-            const statusItem = normalizarStatus(etapa.status);
+            const statusCalculado = statusAutomaticoPorData(etapa.data, etapa.status);
+            const statusItem = normalizarStatus(statusCalculado);
 
             const horarioHtml = etapa.Horário
               ? '<div class="item-extra"><strong>Horário:</strong> ' + etapa.Horário + '</div>'
@@ -473,7 +531,7 @@
             itensHtml += '<div class="item-observacao">' + (etapa.observacao || '') + '</div>';
             itensHtml += horarioHtml;
             itensHtml += meetHtml;
-            itensHtml += '<span class="status ' + statusItem + '">' + formatarStatus(etapa.status) + '</span>';
+            itensHtml += '<span class="status ' + statusItem + '">' + formatarStatus(statusCalculado) + '</span>';
             itensHtml += '</div>';
           });
 
@@ -486,7 +544,7 @@
           '<div class="tratamento-topo" onclick="alternarTratamento(this.parentElement)">' +
             '<div class="tratamento-info">' +
               '<h3>' + (tratamento.nome || 'Tratamento') + '</h3>' +
-              '<div class="tratamento-meta">' + inicioTexto + '<br>' + fimTexto + '</div>' +
+              '<div class="tratamento-meta">' + relatorioHtml + inicioTexto + '<br>' + fimTexto + '</div>' +
             '</div>' +
             '<div class="tratamento-acoes">' +
               '<span class="status ' + statusNormalizado + '">' + formatarStatus(tratamento.status) + '</span>' +
