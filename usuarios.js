@@ -286,6 +286,8 @@ const usuarios = [
 
   /*
   Márcia Aparecida dos Santos
+  usuário: 02832251900
+  senha: 06031977
   */
 
 
@@ -298,10 +300,10 @@ const usuarios = [
   contato: contatoPadrao,
   tratamentos: [
     {
-      nome: 'Tratamento 01 - Radiestesia Completa',
+      nome: 'Tratamento 01 - Reprogramação Vibracional',
       Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/anamnese/laudo_terapia_energetica_anamnese_M%C3%A1rcia_Aparecida_dos_Santos.pdf',
       inicio: '25/04/2026',
-      fim: '17/05/2026',
+      fim: '22/05/2026',
       status: 'Em Andamento',
       itens: [
         {
@@ -328,116 +330,76 @@ const usuarios = [
         },
         {
           item: 'item_02',
-          data: '30/04/2026',
-          observacao: 'Reprogramação Vibracional',
-          status: 'Pendente'
+          data: 'Término: 14/05/2026',
+          observacao: 'Gráfico: Flor da Vida',
+          status: 'Em Andamento'
         },
         {
           item: 'item_03',
-          data: '01/05/2026',
-          observacao: 'Reprogramação Vibracional',
-          status: 'Pendente'
+          data: 'Término: 06/05/2026',
+          observacao: 'Gráfico: Limpeza e Recarga',
+          status: 'Em Andamento'
         },
         {
           item: 'item_04',
-          data: '02/05/2026',
-          observacao: 'Reprogramação Vibracional',
-          status: 'Pendente'
+          data: 'Término: 06/05/2026',
+          observacao: 'Gráfico: Regeneração da Aura',
+          status: 'Em Andamento'
         },
         {
           item: 'item_05',
           data: '03/05/2026',
-          observacao: 'Reprogramação Vibracional',
+          observacao: 'Gráfico: Transformação do Próprio Estado Energético',
+          status: 'Em Andamento'
+        }
+      ]
+    },
+    {
+      nome: 'Tratamento 02 - Harmonização e recuperação pós cirurgia',
+      Relatório: '',
+      inicio: '07/05/2026',
+      fim: '18/05/2026',
+      status: 'Pendente',
+      itens: [
+        {
+          item: 'item_01',
+          data: 'Término: 11/05/2026',
+          observacao: 'Gráfico: Programador Físico',
           status: 'Pendente'
         },
         {
-          item: 'item_06',
-          data: '04/05/2026',
-          observacao: 'Reprogramação Vibracional',
+          item: 'item_02',
+          data: 'Término: 18/05/2026',
+          observacao: 'Gráfico: Yoshua',
           status: 'Pendente'
         },
         {
-          item: 'item_07',
-          data: '05/05/2026',
-          observacao: 'Reprogramação Vibracional',
-          status: 'Pendente'
-        },
-        {
-          item: 'item_08',
-          data: '06/05/2026',
-          observacao: 'Reprogramação Vibracional',
-          status: 'Pendente'
-        },
-        {
-          item: 'item_09',
-          data: '07/05/2026',
-          observacao: 'Protocolo de harmonização e recuperação pós cirurgia',
-          status: 'Pendente'
-        },
-        {
-          item: 'item_10',
-          data: '08/05/2026',
-          observacao: 'Protocolo de harmonização e recuperação pós cirurgia',
-          status: 'Pendente'
-        },
-        {
-          item: 'item_11',
-          data: '09/05/2026',
-          observacao: 'Protocolo de harmonização e recuperação pós cirurgia',
-          status: 'Pendente'
-        },
-        {
-          item: 'item_12',
-          data: '10/05/2026',
-          observacao: 'Protocolo de harmonização e recuperação pós cirurgia',
-          status: 'Pendente'
-        },
-        {
-          item: 'item_13',
-          data: '11/05/2026',
-          observacao: 'Protocolo de harmonização e recuperação pós cirurgia',
-          status: 'Pendente'
-        },
-        {
-          item: 'item_14',
-          data: '12/05/2026',
-          observacao: 'Protocolo de harmonização e recuperação pós cirurgia',
-          status: 'Pendente'
-        },
-        {
-          item: 'item_15',
-          data: '13/05/2026',
-          observacao: 'Protocolo de harmonização e recuperação pós cirurgia',
-          status: 'Pendente'
-        },
-        {
-          item: 'item_16',
-          data: '14/05/2026',
-          observacao: 'Reprogramação de proteção e ambiente profissional',
-          status: 'Pendente'
-        },
-        {
-          item: 'item_17',
-          data: '15/05/2026',
-          observacao: 'Reprogramação de proteção e ambiente profissional',
-          status: 'Pendente'
-        },
-        {
-          item: 'item_18',
-          data: '16/05/2026',
-          observacao: 'Reprogramação de proteção e ambiente profissional',
-          status: 'Pendente'
-        },
-        {
-          item: 'item_19',
-          data: '17/05/2026',
-          observacao: 'Reprogramação de proteção e ambiente profissional',
+          item: 'item_03',
+          data: 'Término: 15/05/2026',
+          observacao: 'Gráfico: Ativação de Força Feminina',
           status: 'Pendente'
         }
       ]
+    },
+    {
+      nome: 'Tratamento 03 - Reprogramação de proteção e ambiente profissional',
+      Relatório: '',
+      inicio: '18/05/2026',
+      fim: '22/05/2026',
+      status: 'Pendente',
+      itens: [
+        {
+          item: 'item_01',
+          data: 'Término: 22/05/2026',
+          observacao: 'Gráfico: 36 Forças',
+          status: 'Pendente'
+        }]
     }
   ]
 },
+
+
+
 
 /*
 Rodolfo 
