@@ -12,6 +12,10 @@ const usuarios = [
     senha: 'adm',
     tipo: 'admin'
   },
+
+  /*
+  Daniela Oliveira Lucena Rodrigues
+  */
   {
     user: 'danioliverluc@gmail.com',
     senha: '01011981',
@@ -196,6 +200,14 @@ const usuarios = [
       }
     ]
   },
+
+  
+
+  /*
+  Adrielen Barbosa Terra
+  */
+
+
   {
     user: 'Adrielen_terra',
     senha: '38215415806',
@@ -271,6 +283,12 @@ const usuarios = [
       }
     ]
   },
+
+  /*
+  Márcia Aparecida dos Santos
+  */
+
+
 {
   user: '02832251900',
   senha: '06031977',
@@ -281,7 +299,7 @@ const usuarios = [
   tratamentos: [
     {
       nome: 'Tratamento 01 - Radiestesia Completa',
-      Relatório: '',
+      Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/anamnese/laudo_terapia_energetica_anamnese_M%C3%A1rcia_Aparecida_dos_Santos.pdf',
       inicio: '25/04/2026',
       fim: '17/05/2026',
       status: 'Em Andamento',
@@ -420,6 +438,12 @@ const usuarios = [
     }
   ]
 },
+
+/*
+Rodolfo 
+Teste
+*/
+
   {
     user: 'rodolfo',
     senha: 'terra2',
