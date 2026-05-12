@@ -1623,6 +1623,142 @@ const usuarios = [
     }
   ]
 },
+  /*
+   Maria Augusta Bodick 
+  usuário: 24653763810 
+  senha: 30081972
+  */
+
+
+{
+  user: '24653763810',
+  senha: '30081972',
+  atendente: 'Maria Augusta Bodick',
+    tipo: 'fluxo',
+    tituloFluxo: 'Acompanhamento dos Tratamentos',
+    descricaoFluxo: 'Visualize abaixo os tratamentos cadastrados e expanda cada um para acompanhar os itens de evolução.',
+    contato: contatoPadrao,
+    tratamentos: [
+    {
+      nome: 'Preparatório para o Tratamento coletivo de Prosperidade',
+      Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/ebooks/Preparat%C3%B3rio%20para%20o%20Tratamento%20Coletivo%20de%20Prosperidade.pdf',
+      texto_titulo: 'Acesso ao material de apoio:',
+      texto_linkado: 'Acesse o pdf',
+      inicio: '10/05/2026',
+      fim: '13/05/2026',
+      status: 'Em Andamento',
+      itens: [
+        {
+          item: 'item_01',
+          data: '12/05/2026',
+          observacao: 'Todo o acompanhamento e as informações relacionadas ao tratamento poderam ser acompanhados por esse portal ou diretamente pelo WhatsApp 😊.',
+          status: 'Em Andamento'
+        }
+      ]
+    },
+    {
+      nome: 'Aquecimento para o Tratamento coletivo de Prosperidade',
+      Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/ebooks/Reprograma%C3%A7%C3%A3o%20Vibracional.pdf',
+      texto_titulo: 'Acesso ao material de apoio:',
+      texto_linkado: 'Reprogramação Vibracional',
+      inicio: '13/05/2026',
+      fim: '20/05/2026',
+      status: 'Em Andamento',
+      itens: [
+        {
+          item: 'item_01',
+          data: '13/05/2026',
+          observacao: 'Anamnese individual e coletiva e montagem do tratamento de aquecimento',
+          status: 'Em Andamento'
+        },{
+          item: 'item_02',
+          data: '14/05/2026',
+          observacao: `
+          Reprogramação Vibracional
+
+          - Limpeza
+          `,
+          status: 'Em Andamento'
+        },{
+          item: 'item_03',
+          data: '15/05/2026',
+          observacao: `
+          Reprogramação Vibracional
+
+          - Limpeza
+          `,
+          status: 'Em Andamento'
+        },
+        {
+          item: 'item_04',
+          data: '16/05/2026',
+          observacao: `
+          Reprogramação Vibracional
+
+          - Transmutação
+          `,
+          status: 'Em Andamento'
+        },
+        {
+          item: 'item_05',
+          data: '17/05/2026',
+          observacao: `
+          Reprogramação Vibracional
+
+          - Transmutação
+          `,
+          status: 'Em Andamento'
+        },
+        {
+          item: 'item_06',
+          data: '18/05/2026',
+          observacao: `
+          Reprogramação Vibracional
+
+          - Selamento
+          `,
+          status: 'Em Andamento'
+        },
+        {
+          item: 'item_07',
+          data: '19/05/2026',
+          observacao: `
+          Reprogramação Vibracional
+
+          - Selamento
+          `,
+          status: 'Em Andamento'
+        },
+        {
+          item: 'item_08',
+          data: '20/05/2026',
+          observacao: `
+          Reprogramação Vibracional
+
+          - Harmonização para o tratamento de prosperidade
+          `,
+          status: 'Em Andamento'
+        }
+      ]
+    },
+    {
+      nome: 'Tratamento Coletivo - Prosperidade e Finanças',
+      Relatório: '',
+      inicio: '21/05/2026',
+      fim: '04/06/2026',
+      status: 'Pendente',
+      itens: [
+        {
+          item: 'item_01',
+          data: 'Término: 04/06/2026',
+          observacao: 'Em breve teremos mais informações referente ao Protocolo de Prósperidade, pois irá ser condizido de acordo com o grupo.',
+          status: 'Pendente'
+        },
+      ]
+    }
+  ]
+},
+
 
 
 
