@@ -417,6 +417,32 @@
         .replace(/\s+/g, '_');
     }
 
+    function statusAutomaticoTratamento(inicio, fim, statusAtual) {
+      const dataInicio = extrairDataValida(inicio);
+      const dataFim = extrairDataValida(fim);
+
+      if (!dataInicio || !dataFim) return statusAtual;
+
+      const hoje = new Date();
+      hoje.setHours(0, 0, 0, 0);
+      dataInicio.setHours(0, 0, 0, 0);
+      dataFim.setHours(0, 0, 0, 0);
+
+      if (hoje < dataInicio) {
+        return 'Pendente';
+      }
+
+      if (hoje >= dataInicio && hoje <= dataFim) {
+        return 'Em Andamento';
+      }
+
+      if (hoje > dataFim) {
+        return 'Finalizado';
+      }
+
+      return statusAtual;
+    }
+
     function formatarStatus(status) {
       const statusNormalizado = normalizarStatus(status);
       const mapa = {
@@ -483,7 +509,13 @@
       const fluxoSubtitulo = document.getElementById('fluxoSubtitulo');
 
       fluxoTitulo.textContent = usuario.tituloFluxo || 'Fluxo';
-      fluxoSubtitulo.textContent = usuario.descricaoFluxo || ('Usuário: ' + usuario.user);
+      const nomeAtendente = usuario.atendente
+        ? 'Atendente responsável: ' + usuario.atendente
+        : '';
+
+      fluxoSubtitulo.innerHTML =
+        (usuario.descricaoFluxo || ('Usuário: ' + usuario.user)) +
+        (nomeAtendente ? '<br><strong>' + nomeAtendente + '</strong>' : '');
 
       timelineContainer.innerHTML = '';
 
@@ -502,10 +534,19 @@
 
         const linkDownload = converterGithubParaRaw(tratamento.Relatório);
 
+        const textoTitulo = tratamento.texto_titulo || 'Acesso a anamnese completa:';
+        const textoLinkado = tratamento.texto_linkado || 'Laudo Terapêutico Vibracional';
+
         const relatorioHtml = tratamento.Relatório
-          ? 'Acesso a anamnese completa: <a href="' + linkDownload + '" target="_blank" rel="noopener noreferrer">Laudo Terapêutico Vibracional</a><br>'
+          ? textoTitulo + ' <a href="' + linkDownload + '" target="_blank" rel="noopener noreferrer">' + textoLinkado + '</a><br>'
           : '';
-        const statusNormalizado = normalizarStatus(tratamento.status);
+        const statusTratamentoCalculado = statusAutomaticoTratamento(
+          tratamento.inicio,
+          tratamento.fim,
+          tratamento.status
+        );
+
+        const statusNormalizado = normalizarStatus(statusTratamentoCalculado);
 
         card.className = 'tratamento-card';
 
@@ -547,7 +588,7 @@
               '<div class="tratamento-meta">' + relatorioHtml + inicioTexto + '<br>' + fimTexto + '</div>' +
             '</div>' +
             '<div class="tratamento-acoes">' +
-              '<span class="status ' + statusNormalizado + '">' + formatarStatus(tratamento.status) + '</span>' +
+              '<span class="status ' + statusNormalizado + '">' + formatarStatus(statusTratamentoCalculado) + '</span>' +
               '<span class="seta">⌄</span>' +
             '</div>' +
           '</div>' +
