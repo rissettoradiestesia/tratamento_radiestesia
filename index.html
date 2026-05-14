@@ -559,6 +559,15 @@
             const statusCalculado = statusAutomaticoPorData(etapa.data, etapa.status);
             const statusItem = normalizarStatus(statusCalculado);
 
+            const etapaLinkDownload = converterGithubParaRaw(etapa.Relatório);
+
+            const etapaRelatorioHtml = etapa.Relatório
+              ? '<div class="item-extra"><strong>' + (etapa.texto_titulo || 'Acesso ao material de apoio:') + '</strong> ' +
+                '<a href="' + etapaLinkDownload + '" target="_blank" rel="noopener noreferrer">' +
+                (etapa.texto_linkado || 'Acessar material') +
+                '</a></div>'
+              : '';
+
             const horarioHtml = etapa.Horário
               ? '<div class="item-extra"><strong>Horário:</strong> ' + etapa.Horário + '</div>'
               : '';
@@ -570,6 +579,7 @@
             itensHtml += '<div class="timeline-item">';
             itensHtml += '<div class="item-data">' + (etapa.data || '') + '</div>';
             itensHtml += '<div class="item-observacao">' + (etapa.observacao || '') + '</div>';
+            itensHtml += etapaRelatorioHtml;
             itensHtml += horarioHtml;
             itensHtml += meetHtml;
             itensHtml += '<span class="status ' + statusItem + '">' + formatarStatus(statusCalculado) + '</span>';

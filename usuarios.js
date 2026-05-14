@@ -263,6 +263,9 @@ const usuarios = [
         },{
           item: 'item_03',
           data: '15/05/2026',
+      Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/ebooks/Cora%C3%A7%C3%A3o%20Desperto.pdf',
+      texto_titulo: 'Acesso ao material de apoio:',
+      texto_linkado: 'Coração Desperto Vibracional',
           observacao: `
           Reprogramação Vibracional
 
@@ -581,6 +584,9 @@ const usuarios = [
         },{
           item: 'item_03',
           data: '15/05/2026',
+      Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/ebooks/Cora%C3%A7%C3%A3o%20Desperto.pdf',
+      texto_titulo: 'Acesso ao material de apoio:',
+      texto_linkado: 'Coração Desperto Vibracional',
           observacao: `
           Reprogramação Vibracional
 
@@ -719,6 +725,9 @@ const usuarios = [
         },{
           item: 'item_03',
           data: '15/05/2026',
+      Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/ebooks/Cora%C3%A7%C3%A3o%20Desperto.pdf',
+      texto_titulo: 'Acesso ao material de apoio:',
+      texto_linkado: 'Coração Desperto Vibracional',
           observacao: `
           Reprogramação Vibracional
 
@@ -857,6 +866,9 @@ const usuarios = [
         },{
           item: 'item_03',
           data: '15/05/2026',
+      Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/ebooks/Cora%C3%A7%C3%A3o%20Desperto.pdf',
+      texto_titulo: 'Acesso ao material de apoio:',
+      texto_linkado: 'Coração Desperto Vibracional',
           observacao: `
           Reprogramação Vibracional
 
@@ -995,6 +1007,9 @@ const usuarios = [
         },{
           item: 'item_03',
           data: '15/05/2026',
+      Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/ebooks/Cora%C3%A7%C3%A3o%20Desperto.pdf',
+      texto_titulo: 'Acesso ao material de apoio:',
+      texto_linkado: 'Coração Desperto Vibracional',
           observacao: `
           Reprogramação Vibracional
 
@@ -1133,6 +1148,9 @@ const usuarios = [
         },{
           item: 'item_03',
           data: '15/05/2026',
+      Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/ebooks/Cora%C3%A7%C3%A3o%20Desperto.pdf',
+      texto_titulo: 'Acesso ao material de apoio:',
+      texto_linkado: 'Coração Desperto Vibracional',
           observacao: `
           Reprogramação Vibracional
 
@@ -1271,6 +1289,9 @@ const usuarios = [
         },{
           item: 'item_03',
           data: '15/05/2026',
+      Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/ebooks/Cora%C3%A7%C3%A3o%20Desperto.pdf',
+      texto_titulo: 'Acesso ao material de apoio:',
+      texto_linkado: 'Coração Desperto Vibracional',
           observacao: `
           Reprogramação Vibracional
 
@@ -1409,6 +1430,9 @@ const usuarios = [
         },{
           item: 'item_03',
           data: '15/05/2026',
+      Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/ebooks/Cora%C3%A7%C3%A3o%20Desperto.pdf',
+      texto_titulo: 'Acesso ao material de apoio:',
+      texto_linkado: 'Coração Desperto Vibracional',
           observacao: `
           Reprogramação Vibracional
 
@@ -1547,6 +1571,9 @@ const usuarios = [
         },{
           item: 'item_03',
           data: '15/05/2026',
+      Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/ebooks/Cora%C3%A7%C3%A3o%20Desperto.pdf',
+      texto_titulo: 'Acesso ao material de apoio:',
+      texto_linkado: 'Coração Desperto Vibracional',
           observacao: `
           Reprogramação Vibracional
 
@@ -1682,6 +1709,9 @@ const usuarios = [
         },{
           item: 'item_03',
           data: '15/05/2026',
+      Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/ebooks/Cora%C3%A7%C3%A3o%20Desperto.pdf',
+      texto_titulo: 'Acesso ao material de apoio:',
+      texto_linkado: 'Coração Desperto Vibracional',
           observacao: `
           Reprogramação Vibracional
 
@@ -1817,6 +1847,9 @@ const usuarios = [
         },{
           item: 'item_03',
           data: '15/05/2026',
+      Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/ebooks/Cora%C3%A7%C3%A3o%20Desperto.pdf',
+      texto_titulo: 'Acesso ao material de apoio:',
+      texto_linkado: 'Coração Desperto Vibracional',
           observacao: `
           Reprogramação Vibracional
 
@@ -1952,6 +1985,9 @@ const usuarios = [
         },{
           item: 'item_03',
           data: '15/05/2026',
+      Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/ebooks/Cora%C3%A7%C3%A3o%20Desperto.pdf',
+      texto_titulo: 'Acesso ao material de apoio:',
+      texto_linkado: 'Coração Desperto Vibracional',
           observacao: `
           Reprogramação Vibracional
 
