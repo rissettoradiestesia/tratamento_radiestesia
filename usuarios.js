@@ -954,16 +954,15 @@ const usuarios = [
   senha: 09101992
   */
 
-
-{
+  {
   user: '41308099894',
   senha: '09101992',
   atendente: 'Jade Gomes Monteiro Granado Lopes',
-    tipo: 'fluxo',
-    tituloFluxo: 'Acompanhamento dos Tratamentos',
-    descricaoFluxo: 'Visualize abaixo os tratamentos cadastrados e expanda cada um para acompanhar os itens de evolução.',
-    contato: contatoPadrao,
-    tratamentos: [
+  tipo: 'fluxo',
+  tituloFluxo: 'Acompanhamento dos Tratamentos',
+  descricaoFluxo: 'Visualize abaixo os tratamentos cadastrados e expanda cada um para acompanhar os itens de evolução.',
+  contato: contatoPadrao,
+  tratamentos: [
     {
       nome: 'Preparatório para o Tratamento coletivo de Prosperidade',
       Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/ebooks/Preparat%C3%B3rio%20para%20o%20Tratamento%20Coletivo%20de%20Prosperidade.pdf',
@@ -976,7 +975,7 @@ const usuarios = [
         {
           item: 'item_01',
           data: '12/05/2026',
-          observacao: 'Todo o acompanhamento e as informações relacionadas ao tratamento poderam ser acompanhados por esse portal ou diretamente pelo WhatsApp 😊.',
+          observacao: 'Todo o acompanhamento e as informações relacionadas ao tratamento poderão ser acompanhados por esse portal ou diretamente pelo WhatsApp 😊.',
           status: 'Em Andamento'
         }
       ]
@@ -995,25 +994,27 @@ const usuarios = [
           data: '13/05/2026',
           observacao: 'Anamnese individual e coletiva e montagem do tratamento de aquecimento',
           status: 'Em Andamento'
-        },{
+        },
+        {
           item: 'item_02',
           data: '14/05/2026',
           observacao: `
-          Reprogramação Vibracional
+Reprogramação Vibracional
 
-          - Limpeza
+- Limpeza
           `,
           status: 'Em Andamento'
-        },{
+        },
+        {
           item: 'item_03',
           data: '15/05/2026',
-      Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/ebooks/Cora%C3%A7%C3%A3o%20Desperto.pdf',
-      texto_titulo: 'Acesso ao material de apoio:',
-      texto_linkado: 'Coração Desperto Vibracional',
+          Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/ebooks/Cora%C3%A7%C3%A3o%20Desperto.pdf',
+          texto_titulo: 'Acesso ao material de apoio:',
+          texto_linkado: 'Coração Desperto Vibracional',
           observacao: `
-          Reprogramação Vibracional
+Reprogramação Vibracional
 
-          - Limpeza
+- Limpeza
           `,
           status: 'Em Andamento'
         },
@@ -1021,9 +1022,9 @@ const usuarios = [
           item: 'item_04',
           data: '16/05/2026',
           observacao: `
-          Reprogramação Vibracional
+Reprogramação Vibracional
 
-          - Transmutação
+- Transmutação
           `,
           status: 'Em Andamento'
         },
@@ -1031,9 +1032,9 @@ const usuarios = [
           item: 'item_05',
           data: '17/05/2026',
           observacao: `
-          Reprogramação Vibracional
+Reprogramação Vibracional
 
-          - Transmutação
+- Transmutação
           `,
           status: 'Em Andamento'
         },
@@ -1041,9 +1042,9 @@ const usuarios = [
           item: 'item_06',
           data: '18/05/2026',
           observacao: `
-          Reprogramação Vibracional
+Reprogramação Vibracional
 
-          - Selamento
+- Selamento
           `,
           status: 'Em Andamento'
         },
@@ -1051,9 +1052,9 @@ const usuarios = [
           item: 'item_07',
           data: '19/05/2026',
           observacao: `
-          Reprogramação Vibracional
+Reprogramação Vibracional
 
-          - Selamento
+- Selamento
           `,
           status: 'Em Andamento'
         },
@@ -1061,9 +1062,9 @@ const usuarios = [
           item: 'item_08',
           data: '20/05/2026',
           observacao: `
-          Reprogramação Vibracional
+Reprogramação Vibracional
 
-          - Harmonização para o tratamento de prosperidade
+- Harmonização para o tratamento de prosperidade
           `,
           status: 'Em Andamento'
         }
@@ -1079,9 +1080,610 @@ const usuarios = [
         {
           item: 'item_01',
           data: 'Término: 04/06/2026',
-          observacao: 'Em breve teremos mais informações referente ao Protocolo de Prósperidade, pois irá ser condizido de acordo com o grupo.',
+          observacao: 'Em breve teremos mais informações referente ao Protocolo de Prosperidade, pois irá ser conduzido de acordo com o grupo.',
+          status: 'Pendente'
+        }
+      ]
+    },
+    {
+      nome: 'Tratamento de Limpeza energético da ambiente profissional',
+      Relatório: 'https://github.com/rissettoradiestesia/tratamento_radiestesia/blob/main/plantas_locais/escritorio_posicionamento_pessoas.jpeg',
+      texto_titulo: 'Planta do escritório com a localização das profissionais:',
+      texto_linkado: 'Foto enviada pela Jade',
+      inicio: '18/05/2026',
+      fim: '24/05/2026',
+      status: 'Em Andamento',
+      itens: [
+        {
+          item: 'item_01',
+          data: '17/05/2026',
+          observacao: 'Realização da anamnese do escritório mapeando o local e cada cômodo.',
+          status: 'Concluído'
+        },
+        {
+          item: 'item_02',
+          data: '18/05/2026',
+          observacao: `
+Tratamento Montado
+
+- SCAP
+- Planta com potencializador em cada Cômodo
+- Harmonia
+- Luxor
+- Keiti
+- Turbilhão com Plutão
+- Labirinto de Amiens
+- Re-harmonização do ambiente de trabalho
+          `,
           status: 'Pendente'
         },
+        {
+          item: 'item_03',
+          data: '19/05/2026',
+          observacao: `
+Tratamento Montado
+
+- SCAP
+- Planta com potencializador em cada Cômodo
+- Harmonia
+- Luxor
+- Keiti
+- Turbilhão com Plutão
+- Labirinto de Amiens
+- Re-harmonização do ambiente de trabalho
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_04',
+          data: '20/05/2026',
+          observacao: `
+Tratamento Montado
+
+- SCAP
+- Planta com potencializador em cada Cômodo
+- Harmonia
+- Luxor
+- Keiti
+- Turbilhão com Plutão
+- Labirinto de Amiens
+- Re-harmonização do ambiente de trabalho
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_05',
+          data: '21/05/2026',
+          observacao: `
+Tratamento Montado
+
+- SCAP
+- Planta com potencializador em cada Cômodo
+- Harmonia
+- Luxor
+- Keiti
+- Turbilhão com Plutão
+- Labirinto de Amiens
+- Re-harmonização do ambiente de trabalho
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_06',
+          data: '22/05/2026',
+          observacao: `
+Tratamento Montado
+
+- SCAP
+- Planta com potencializador em cada Cômodo
+- Harmonia
+- Luxor
+- Keiti
+- Turbilhão com Plutão
+- Labirinto de Amiens
+- Re-harmonização do ambiente de trabalho
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_07',
+          data: '23/05/2026',
+          observacao: `
+Tratamento Montado
+
+- SCAP
+- Planta com potencializador em cada Cômodo
+- Harmonia
+- Luxor
+- Keiti
+- Turbilhão com Plutão
+- Labirinto de Amiens
+- Re-harmonização do ambiente de trabalho
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_08',
+          data: '24/05/2026',
+          observacao: `
+Tratamento Montado
+
+- SCAP
+- Planta com potencializador em cada Cômodo
+- Harmonia
+- Luxor
+- Keiti
+- Turbilhão com Plutão
+- Labirinto de Amiens
+- Re-harmonização do ambiente de trabalho
+          `,
+          status: 'Pendente'
+        }
+      ]
+    },
+    {
+      nome: 'Tratamento de abertura e aumento de visualização do CNPJ e abertura de fechamentos de contratos de alto potencial',
+      inicio: '25/05/2026',
+      fim: '31/05/2026',
+      status: 'Pendente',
+      itens: [
+        {
+          item: 'item_01',
+          data: '25/05/2026',
+          observacao: 'Construção do tratamento de abertura e aumento de visualização do CNPJ',
+          status: 'Pendente'
+        }
+      ]
+    },
+    {
+      nome: 'Protocolo de concentração aos estudo para a prova',
+      inicio: '18/05/2026',
+      fim: '08/06/2026',
+      status: 'Pendente',
+      itens: [
+        {
+          item: 'item_01',
+          data: '18/05/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_02',
+          data: '19/05/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_03',
+          data: '20/05/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_04',
+          data: '21/05/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_05',
+          data: '22/05/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_06',
+          data: '23/05/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_07',
+          data: '24/05/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_08',
+          data: '25/05/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_09',
+          data: '26/05/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_10',
+          data: '27/05/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_11',
+          data: '28/05/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_12',
+          data: '29/05/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_13',
+          data: '30/05/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_14',
+          data: '31/05/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_15',
+          data: '01/06/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_16',
+          data: '02/06/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_17',
+          data: '03/06/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_18',
+          data: '04/06/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_19',
+          data: '05/06/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_20',
+          data: '06/06/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_21',
+          data: '07/06/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_22',
+          data: '08/06/2026',
+          observacao: `
+Tratamento Montado
+
+- Turbilhão
+- Diafragma
+- Labirinto de Chartes
+- Desembaraçador
+- Sete Círculos
+- Pirâmide de Tao
+          `,
+          status: 'Pendente'
+        }
+      ]
+    },
+    {
+      nome: 'Preparatório energético para a 2ª etapa da prova da OAB',
+      inicio: '15/06/2026',
+      fim: '21/06/2026',
+      status: 'Pendente',
+      itens: [
+        {
+          item: 'item_01',
+          data: '15/06/2026',
+          observacao: `
+Tratamento Montado
+
+- Desembaraçador
+- Diafragma
+- Espiral Cósmica
+- Labirinto de Chartes
+- Sorte e Sucesso
+- Turbilhão com Mercúrio
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_02',
+          data: '16/06/2026',
+          observacao: `
+Tratamento Montado
+
+- Desembaraçador
+- Diafragma
+- Espiral Cósmica
+- Labirinto de Chartes
+- Sorte e Sucesso
+- Turbilhão com Mercúrio
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_03',
+          data: '17/06/2026',
+          observacao: `
+Tratamento Montado
+
+- Desembaraçador
+- Diafragma
+- Espiral Cósmica
+- Labirinto de Chartes
+- Sorte e Sucesso
+- Turbilhão com Mercúrio
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_04',
+          data: '18/06/2026',
+          observacao: `
+Tratamento Montado
+
+- Desembaraçador
+- Diafragma
+- Espiral Cósmica
+- Labirinto de Chartes
+- Sorte e Sucesso
+- Turbilhão com Mercúrio
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_05',
+          data: '19/06/2026',
+          observacao: `
+Tratamento Montado
+
+- Desembaraçador
+- Diafragma
+- Espiral Cósmica
+- Labirinto de Chartes
+- Sorte e Sucesso
+- Turbilhão com Mercúrio
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_06',
+          data: '20/06/2026',
+          observacao: `
+Tratamento Montado
+
+- Desembaraçador
+- Diafragma
+- Espiral Cósmica
+- Labirinto de Chartes
+- Sorte e Sucesso
+- Turbilhão com Mercúrio
+          `,
+          status: 'Pendente'
+        },
+        {
+          item: 'item_07',
+          data: '21/06/2026',
+          observacao: `
+Tratamento Montado
+
+- Desembaraçador
+- Diafragma
+- Espiral Cósmica
+- Labirinto de Chartes
+- Sorte e Sucesso
+- Turbilhão com Mercúrio
+          `,
+          status: 'Pendente'
+        }
       ]
     }
   ]
